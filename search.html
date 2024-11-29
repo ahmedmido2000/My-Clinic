@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Clinic</title>
+    <!--bootstrap-file-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--bootstrap-file-->
+    <!--fontawesome-file-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--icons-site-->
+    <link rel="icon" type="png" href="img/logo.png" />
+    <!--icons-site-->
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!--google-font-->
+    <!--woow AnimateFiles Css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--woow AnimateFiles Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+    <!--google-font-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet" />
+      
+  </head>
+  <body class="text-black">
+        <!-- header -->
+        <header class="bg-white" dir="ltr">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg  px-3">
+              <div class="d-flex align-items-center">
+                  <a href="index.html"><img src="./img/logo.png" class="img-fluid logoImg" alt=""></a>
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <span style="color: #3b3a5e"
+                    ><i class="fa-solid fa-bars p-1"></i
+                  ></span>
+                </span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                  <li class="nav-item active fw-bold">
+                    <a class="nav-link text-black" href="index.html"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black " href="contactUs.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black " href="terms.html">Terms & Conditions</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link green-color button-hover" href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+                  </li>
+                </ul>
+                <div class="d-flex flex-wrap gap-2 align-items-center" dir="rtl">
+                  <a href="profile.html"><img src="img/person1.jpeg" class="img-fluid userImg" alt=""></a>
+                  <a href="profile.html" class="text-black text-decoration-none"><p class="m-0 fw-bold">احمد على صابر</p></a>
+                  <i class="fa-solid fa-search text-green search-icon" onclick="showSearchInput()" style="font-size: 25px;cursor: pointer;"></i>
+                  <input type="text" class="form-control search-input d-none" style="width: 75px;" placeholder="search">
+                  <a href="notification.html"><i class="fa-solid fa-bell text-green me-1" style="font-size: 25px;cursor: pointer;"></i></a>
+                  <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img id="selectedFlag" src="img/egypt.png" alt="Selected Language"> <span id="selectedLanguage" >اللغة العربية</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="background-color: white;">
+                        <a class="dropdown-item" href="#" onclick="setLanguage('اللغة العربية', 'img/egypt.png')">
+                            <img src="img/egypt.png" style="width: 30px;" alt="اللغة العربية"> اللغة العربية
+                        </a>
+                        <div class="dropdown-divider"></div>
+                  
+                        <a class="dropdown-item" href="#" onclick="setLanguage('English', 'img/amirca.png')">
+                            <img src="img/amirca.png" alt="English"> English
+                        </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <!-- header -->
+    <section>
+        <div class="container">
+            <div class="d-flex justify-content-between p-4 mx-md-5">
+                <div>
+                    <h5 class="fw-bold">احجز مع افضل دكتور في القاهرة</h5>
+                    <p>احجز اونلاين او كلم <i class="fa-solid fa-phone text-danger me-3"></i> 166645</p>
+                    <p>١٥٠٠٠ دكتور -٩٠٠٠ استاذ واستشاري - اكثر من ٤٠ تخصص</p>
+                </div>
+                <img src="img/dr-bg-2-removebg-preview.png" class="img-fluid" style="width:200px ; transform: translateY(-15px);" alt="">
+            </div>
+            <div class="d-flex flex-wrap justify-content-center" style="transform: translateY(-40px);">
+              <div class="dropdown">
+                <button class="dropdown-button" style="border-radius: 0 10px 10px 0;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-stethoscope"></i>
+                    <span class="title">اختر التخصص</span>
+                    <i class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">تخصص 1</a>
+                    <a class="dropdown-item" href="#">تخصص 2</a>
+                    <a class="dropdown-item" href="#">تخصص 3</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-location-dot"></i>
+                    <span class="title">اختر المحافظة</span>
+                    <i class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">تخصص 1</a>
+                    <a class="dropdown-item" href="#">تخصص 2</a>
+                    <a class="dropdown-item" href="#">تخصص 3</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-location-dot"></i>
+                    <span class="title">اختر المنطقة</span>
+                    <i class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">تخصص 1</a>
+                    <a class="dropdown-item" href="#">تخصص 2</a>
+                    <a class="dropdown-item" href="#">تخصص 3</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-button px-1" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-doctor"></i>
+                    <span class="title"> الدكتور أو المستشفى</span>
+                    <i class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">تخصص 1</a>
+                    <a class="dropdown-item" href="#">تخصص 2</a>
+                    <a class="dropdown-item" href="#">تخصص 3</a>
+                </div>
+              </div>
+              <div class=" btn btn-danger pt-3" style="border-radius:10px 0 0 10px;width: 185px;">
+                  <i class="fa-solid fa-search ms-2"></i>
+                  البحث
+              </div>
+            </div>
+        </div>
+    </section>
+    <section>
+      <div class="container p-4" style="background-color:#E4F1Ec ;">
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-9 d-flex gap-2">
+              <h6 class="fw-bold">اسنان</h6>
+              <p>16 دكتور</p>
+            </div>
+          </div>
+          <div class="row align-items-start">
+            <div class="col-md-3 mt-3 bg-white px-0" style="border-radius:15px 15px 0 0;">
+              <div class="bg-green text-white text-end p-3 px-4" style="border-radius:15px 15px 0 0;">
+                  <h5><i class="fa-solid fa-filter"></i> حدد بحثك</h5>
+              </div>
+              <div  class=" text-black text-end p-3 px-4">
+                <div class="d-flex text-green justify-content-between">
+                  <div class="">
+                    <h6><i class="fa-solid fa-graduation-cap"></i> اللقب </h6>
+                  </div>
+                  <i class="fas fa-caret-down name-icon" onclick="toggleCheckbox(this)" style="cursor: pointer;"></i>
+                </div>
+                <div class="name-div">
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="name" id="master">
+                    <label for="master">أستاذ</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="name" id="teacher">
+                    <label for="teacher">مدرس</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="name" id="consultant">
+                    <label for="consultant">استشارى</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="name" id="specialist">
+                    <label for="specialist">اخصائى</label>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div  class=" text-black text-end p-3 px-4">
+                <div class="d-flex text-green justify-content-between">
+                  <div class="">
+                    <h6><i class="fa-solid fa-venus-mars"></i> النوع </h6>
+                  </div>
+                  <i class="fas fa-caret-down name-icon" onclick="toggleCheckbox(this)" style="cursor: pointer;"></i>
+                </div>
+                <div class="name-div">
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="gender" id="female">
+                    <label for="female">دكتوره</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="gender" id="male">
+                    <label for="male">دكتور</label>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div  class=" text-black text-end p-3 px-4">
+                <div class="d-flex text-green justify-content-between">
+                  <div class="">
+                    <h6><i class="fa-solid fa-stethoscope"></i> التخصصات الفرعيه </h6>
+                  </div>
+                  <i class="fas fa-caret-down name-icon" onclick="toggleCheckbox(this)" style="cursor: pointer;"></i>
+                </div>
+                <div class="name-div">
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="specialist" id="all">
+                    <label for="all">الكل</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="specialist" id="adults">
+                    <label for="adults">اسنان بالغين</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="specialist" id="clildren">
+                    <label for="clildren">اسنان اطفال</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="specialist" id="olders">
+                    <label for="olders">اسنان مسنين</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="specialist" id="attitude">
+                    <label for="attitude">تقويم اسنان</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="specialist" id="clean">
+                    <label for="clean">تجميل اسنان</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="specialist" id="make">
+                    <label for="make">زراعه اسنان</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="specialist" id="tre">
+                    <label for="tre">علاج اللثه</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="specialist" id="trd">
+                    <label for="trd">تركيبات اسنان</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="specialist" id="leaser">
+                    <label for="leaser">اشعه اسنان</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="specialist" id="narvus">
+                    <label for="narvus">حشو وعلاج الجذور والاعصاب</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="specialist" id="face">
+                    <label for="face">جراحه وجهه وفكين</label>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div  class=" text-black text-end p-3 px-4">
+                <div class="d-flex text-green justify-content-between">
+                  <div class="">
+                    <h6><i class="fa-solid fa-money-bill"></i> الأسعار </h6>
+                  </div>
+                  <i class="fas fa-caret-down name-icon" onclick="toggleCheckbox(this)" style="cursor: pointer;"></i>
+                </div>
+                <div class="name-div">
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="price" id="all-price">
+                    <label for="all-price">الكل</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="price" id="less-50">
+                    <label for="less-50">اقل من 50</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="price" id="less-100">
+                    <label for="less-100">من 50 الى 100</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="price" id="less-150">
+                    <label for="less-150">من 100 الى 150</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="price" id="less-200">
+                    <label for="less-200">من 150 الى 200</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="price" id="less-300">
+                    <label for="less-300">من 250 الى 300</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="price" id="300">
+                    <label for="300">300</label>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div  class=" text-black text-end p-3 px-4">
+                <div class="d-flex text-green justify-content-between">
+                  <div class="">
+                    <h6><i class="fa-solid fa-stethoscope"></i> المنشاه </h6>
+                  </div>
+                  <i class="fas fa-caret-down name-icon" onclick="toggleCheckbox(this)" style="cursor: pointer;"></i>
+                </div>
+                <div class="name-div">
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="build" id="today">
+                    <label for="today">مستشفى</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="build" id="clinic">
+                    <label for="clinic">عياده</label>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div  class=" text-black text-end p-3 px-4">
+                <div class="d-flex text-green justify-content-between">
+                  <div class="">
+                    <h6><i class="fa-solid fa-sort"></i> الترتيب </h6>
+                  </div>
+                  <i class="fas fa-caret-down name-icon" onclick="toggleCheckbox(this)" style="cursor: pointer;"></i>
+                </div>
+                <div class="name-div">
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="sort" id="high-rate">
+                    <label for="high-rate">اعلى تقييما</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="sort" id="low-price">
+                    <label for="low-price">اقل سعرا</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="sort" id="high-price">
+                    <label for="high-price">اعلى سعرا</label>
+                  </div>
+                  <div class="mt-3 d-flex gap-2">
+                    <input type="checkbox" name="sort" id="less-wait">
+                    <label for="less-wait">اقل فى وقت الانتظار</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-9 mt-3">
+              <div>
+                <div class="bg-white p-4 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-lg-between mb-3" style="border-radius: 20px;" dir="rtl">
+                  <div class="d-flex justify-content-center align-items-start gap-3 flex-wrap">
+                      <img src="img/Ellipse 9.png" class="img-fluid" style="width:100px ;height:100px;border-radius: 50%;" alt="">
+                      <div class="text-end">
+                          <h4 class="fw-bold">دكتوره نادين جهاد احمد العوضى</h4>
+                          <p class="text-black-50 m-1">استاذ علاج الجذور , كلية طب اسنان جامعة عين شمس</p>
+                          <div class="d-flex gap-2 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <p class="text-black-50 m-1">التقيم العام من 953زائر</p>
+                          <div class="d-flex gap-2 align-items-start mt-3">
+                              <i class="fa-solid fa-stethoscope text-green mt-3"></i>
+                              <p class="m-2">دكتور اسنان متخصص فى اسنان الاطفال و, تجميل الاسنان,</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-location-dot text-green mt-3"></i>
+                              <p class="m-2">مدينة نصر</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-money-bill text-green mt-3"></i>
+                              <p class="m-2">سعر الكشف : 400 جنية</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-clock text-green mt-3"></i>
+                              <p class="m-2">مدة الانتظار: ساعة و45 دقيقة</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-phone text-green mt-3"></i>
+                              <p class="m-2">16664سعر المكالمة العادية</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                    <div class="mt-3 d-flex gap-2">
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">اليوم</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-light text-white p-2" style="border-radius:10px 10px 0 0 ;">غدا</div>
+                          <div class="bg-white text-black p-0 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">لا يوحد مواعيد</p>
+                          </div>
+                          <div class="btn btn-light text-white p-2" style="border-radius: 0 0 10px 10px;">احجز</div>
+                      </div>  
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">بعد الغد</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                  </div>
+                  <div class="d-flex m-3 justify-content-center gap-3">
+                    <i class="fa-solid fa-arrow-circle-right text-green" style="font-size: 30px; cursor:pointer;border-radius:50%"></i>
+                    <i class="fa-solid fa-arrow-circle-left bg-green text-white" style="font-size: 30px; cursor:pointer;border-radius:50%"></i>
+                  </div>
+                </div>
+              </div>
+                <div class="bg-white p-4 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-lg-between mb-3" style="border-radius: 20px;" dir="rtl">
+                  <div class="d-flex justify-content-center align-items-start gap-3 flex-wrap">
+                      <img src="img/Ellipse 9.png" class="img-fluid" style="width:100px ;height:100px;border-radius: 50%;" alt="">
+                      <div class="text-end">
+                          <h4 class="fw-bold">دكتوره نادين جهاد احمد العوضى</h4>
+                          <p class="text-black-50 m-1">استاذ علاج الجذور , كلية طب اسنان جامعة عين شمس</p>
+                          <div class="d-flex gap-2 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <p class="text-black-50 m-1">التقيم العام من 953زائر</p>
+                          <div class="d-flex gap-2 align-items-start mt-3">
+                              <i class="fa-solid fa-stethoscope text-green mt-3"></i>
+                              <p class="m-2">دكتور اسنان متخصص فى اسنان الاطفال و, تجميل الاسنان,</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-location-dot text-green mt-3"></i>
+                              <p class="m-2">مدينة نصر</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-money-bill text-green mt-3"></i>
+                              <p class="m-2">سعر الكشف : 400 جنية</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-clock text-green mt-3"></i>
+                              <p class="m-2">مدة الانتظار: ساعة و45 دقيقة</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-phone text-green mt-3"></i>
+                              <p class="m-2">16664سعر المكالمة العادية</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                    <div class="mt-3 d-flex gap-2">
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">اليوم</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">غدا</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">بعد الغد</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                  </div>
+                  <div class="d-flex m-3 justify-content-center gap-3">
+                    <i class="fa-solid fa-arrow-circle-right text-green" style="font-size: 30px; cursor:pointer;border-radius:50%"></i>
+                    <i class="fa-solid fa-arrow-circle-left bg-green text-white" style="font-size: 30px; cursor:pointer;border-radius:50%"></i>
+                  </div>
+                </div>
+              </div>
+                <div class="bg-white p-4 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-lg-between mb-3" style="border-radius: 20px;" dir="rtl">
+                  <div class="d-flex justify-content-center align-items-start gap-3 flex-wrap">
+                      <img src="img/Ellipse 9.png" class="img-fluid" style="width:100px ;height:100px;border-radius: 50%;" alt="">
+                      <div class="text-end">
+                          <h4 class="fw-bold">دكتوره نادين جهاد احمد العوضى</h4>
+                          <p class="text-black-50 m-1">استاذ علاج الجذور , كلية طب اسنان جامعة عين شمس</p>
+                          <div class="d-flex gap-2 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <p class="text-black-50 m-1">التقيم العام من 953زائر</p>
+                          <div class="d-flex gap-2 align-items-start mt-3">
+                              <i class="fa-solid fa-stethoscope text-green mt-3"></i>
+                              <p class="m-2">دكتور اسنان متخصص فى اسنان الاطفال و, تجميل الاسنان,</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-location-dot text-green mt-3"></i>
+                              <p class="m-2">مدينة نصر</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-money-bill text-green mt-3"></i>
+                              <p class="m-2">سعر الكشف : 400 جنية</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-clock text-green mt-3"></i>
+                              <p class="m-2">مدة الانتظار: ساعة و45 دقيقة</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-phone text-green mt-3"></i>
+                              <p class="m-2">16664سعر المكالمة العادية</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                    <div class="mt-3 d-flex gap-2">
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">اليوم</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">غدا</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">بعد الغد</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                  </div>
+                  <div class="d-flex m-3 justify-content-center gap-3">
+                    <i class="fa-solid fa-arrow-circle-right text-green" style="font-size: 30px; cursor:pointer;border-radius:50%"></i>
+                    <i class="fa-solid fa-arrow-circle-left bg-green text-white" style="font-size: 30px; cursor:pointer;border-radius:50%"></i>
+                  </div>
+                </div>
+              </div>
+                <div class="bg-white p-4 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-lg-between mb-3" style="border-radius: 20px;" dir="rtl">
+                  <div class="d-flex justify-content-center align-items-start gap-3 flex-wrap">
+                      <img src="img/Ellipse 9.png" class="img-fluid" style="width:100px ;height:100px;border-radius: 50%;" alt="">
+                      <div class="text-end">
+                          <h4 class="fw-bold">دكتوره نادين جهاد احمد العوضى</h4>
+                          <p class="text-black-50 m-1">استاذ علاج الجذور , كلية طب اسنان جامعة عين شمس</p>
+                          <div class="d-flex gap-2 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <p class="text-black-50 m-1">التقيم العام من 953زائر</p>
+                          <div class="d-flex gap-2 align-items-start mt-3">
+                              <i class="fa-solid fa-stethoscope text-green mt-3"></i>
+                              <p class="m-2">دكتور اسنان متخصص فى اسنان الاطفال و, تجميل الاسنان,</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-location-dot text-green mt-3"></i>
+                              <p class="m-2">مدينة نصر</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-money-bill text-green mt-3"></i>
+                              <p class="m-2">سعر الكشف : 400 جنية</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-clock text-green mt-3"></i>
+                              <p class="m-2">مدة الانتظار: ساعة و45 دقيقة</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-phone text-green mt-3"></i>
+                              <p class="m-2">16664سعر المكالمة العادية</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                    <div class="mt-3 d-flex gap-2">
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">اليوم</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">غدا</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">بعد الغد</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                  </div>
+                  <div class="d-flex m-3 justify-content-center gap-3">
+                    <i class="fa-solid fa-arrow-circle-right text-green" style="font-size: 30px; cursor:pointer;border-radius:50%"></i>
+                    <i class="fa-solid fa-arrow-circle-left bg-green text-white" style="font-size: 30px; cursor:pointer;border-radius:50%"></i>
+                  </div>
+                </div>
+              </div>
+                <div class="bg-white p-4 d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-lg-between mb-3" style="border-radius: 20px;" dir="rtl">
+                  <div class="d-flex justify-content-center align-items-start gap-3 flex-wrap">
+                      <img src="img/Ellipse 9.png" class="img-fluid" style="width:100px ;height:100px;border-radius: 50%;" alt="">
+                      <div class="text-end">
+                          <h4 class="fw-bold">دكتوره نادين جهاد احمد العوضى</h4>
+                          <p class="text-black-50 m-1">استاذ علاج الجذور , كلية طب اسنان جامعة عين شمس</p>
+                          <div class="d-flex gap-2 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <p class="text-black-50 m-1">التقيم العام من 953زائر</p>
+                          <div class="d-flex gap-2 align-items-start mt-3">
+                              <i class="fa-solid fa-stethoscope text-green mt-3"></i>
+                              <p class="m-2">دكتور اسنان متخصص فى اسنان الاطفال و, تجميل الاسنان,</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-location-dot text-green mt-3"></i>
+                              <p class="m-2">مدينة نصر</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-money-bill text-green mt-3"></i>
+                              <p class="m-2">سعر الكشف : 400 جنية</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-clock text-green mt-3"></i>
+                              <p class="m-2">مدة الانتظار: ساعة و45 دقيقة</p>
+                          </div>
+                          <div class="d-flex gap-2 align-items-start">
+                              <i class="fa-solid fa-phone text-green mt-3"></i>
+                              <p class="m-2">16664سعر المكالمة العادية</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                    <div class="mt-3 d-flex gap-2">
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">اليوم</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">غدا</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                      <div class="d-flex flex-column text-center border" style="border-radius:12px;height: 250px;width:80px">
+                          <div class="bg-green text-white p-2" style="border-radius:10px 10px 0 0 ;">بعد الغد</div>
+                          <div class="bg-white text-black p-1 flex-grow-1 d-flex flex-column justify-content-center" style="border-radius:10px 10px 0 0 ;">
+                            <p class="m-0">من :12 ص</p>
+                            <p class="m-0">حتى :9 م</p>
+                          </div>
+                          <a href="find-doctor.html" class="btn btn-danger p-2" style="border-radius: 0 0 10px 10px;">احجز</a>
+                      </div>  
+                  </div>
+                  <div class="d-flex m-3 justify-content-center gap-3">
+                    <i class="fa-solid fa-arrow-circle-right text-green" style="font-size: 30px; cursor:pointer;border-radius:50%"></i>
+                    <i class="fa-solid fa-arrow-circle-left bg-green text-white" style="font-size: 30px; cursor:pointer;border-radius:50%"></i>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="d-flex m-3 justify-content-center gap-3">
+                <i class="fa-solid fa-arrow-circle-right text-green" style="font-size: 50px; cursor:pointer;border-radius:50%"></i>
+                <div class="text-green bg-white px-3 py-1" style="font-size: 30px; cursor:pointer;border-radius:50%">1</div>
+                <div class="text-white bg-green px-3 py-1" style="font-size: 30px; cursor:pointer;border-radius:50%">2</div>
+                <i class="fa-solid fa-arrow-circle-left bg-green text-white" style="font-size: 50px; cursor:pointer;border-radius:50%"></i>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+        <!-- footer -->
+        <footer class="mt-4" dir="ltr" style="background-color: #C4E6D9;">
+          <div class="container">
+              <div class="row p-4">
+                  <div class="col-md-4">
+                      <div class="d-flex justify-content-center align-items-center">
+                          <a href="index.html"><img src="./img/logo.png" style="width:120px ;" alt=""></a>
+                      </div>
+                      <div class="icons d-flex flex-wrap justify-content-center align-items-center gap-3">
+                          <a href="#"><i class="fa-brands fa-facebook text-green"></i></a>
+                          <a href="#"><i class="fa-brands fa-instagram text-green"></i></a>
+                          <a href="#"><i class="fa-brands fa-whatsapp text-green"></i></a>
+                          <a href="#"><i class="fa-brands fa-twitter text-green"></i></a>
+                      </div>
+                  </div>
+                  <div class="col-md-2 text-center">
+                      <h4 class="fw-bold mb-3">Important </h4>
+                      <p><a href="find-doctor.html" target="_blank" class="text-black text-decoration-none">Find Doctors</a></p>
+                      <p><a href="ourServices.html" target="_blank" class="text-black text-decoration-none">Our Services</a></p>
+                      <p><a href="reviews.html" target="_blank" class="text-black text-decoration-none">Reviews</a></p>
+                  </div>
+                  <div class="col-md-3 text-center">
+                      <h4 class="fw-bold mb-3">Help</h4>
+                      <p><a href="doctors.html" target="_blank" class="text-black text-decoration-none">Consultaion Call</a></p>
+                      <p><a href="privacy.html" target="_blank" class="text-black text-decoration-none">Privacy Policy</a></p>
+                      <p><a href="terms.html" target="_blank" class="text-black text-decoration-none">Terms & Conditions</a></p>
+                  </div>
+                  <div class="col-md-3 text-center text-md-start">
+                      <h4 class="fw-bold mb-3">Contact us </h4>
+                      <div class="d-flex justify-content-md-start justify-content-center gap-2 text-green">
+                        <i class="fa-solid fa-envelope mt-1"></i>
+                        <p>User32@gmail.com</p>
+                      </div>
+                      <div class="d-flex justify-content-md-start justify-content-center gap-2 text-green">
+                        <i class="fa-solid fa-phone mt-1"></i>
+                        <p>0127 502 4454</p>
+                      </div>
+                      <div class="d-flex justify-content-md-start justify-content-center gap-2 text-green">
+                        <i class="fa-solid fa-location-dot mt-1"></i>
+                        <p>Aga - Mansoura - Egypt</p>
+                      </div>
+                  </div>
+                  <p class="text-center text-green mt-2">@2023 medical .All rights reserved</p>
+              </div>
+          </div>
+        </footer>
+        <!-- footer -->
+
+    <!--scirpt Files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/search.js"></script>
+    <!--scirpt Files-->
+  </body>
+</html>

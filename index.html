@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!--style file-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/search.css">
+    <!--style file-->
+    <!--bootstrap file-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="png" href="img/logo.png" />
+    <!--bootstrap file-->
+    <!--fontawesome file-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--fontawesome file-->
+</head>
+
+<body>
+    <header class="bg-white">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg  px-3">
+            <div class="d-flex align-items-center">
+                <img src="./img/logo.png" class="img-fluid logoImg" alt="">
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">
+                <span style="color: #3b3a5e"
+                  ><i class="fa-solid fa-bars p-1"></i
+                ></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav m-auto">
+                <li class="nav-item active fw-bold">
+                  <a class="nav-link text-black" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-black " href="contactUs.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-black " href="terms.html">Terms & Conditions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link green-color button-hover" href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+                </li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2 align-items-center" dir="rtl">
+                <a href="profile.html"><img src="img/person1.jpeg" class="img-fluid userImg" alt=""></a>
+                <a href="profile.html" class="text-black text-decoration-none"><p class="m-0 fw-bold">احمد على صابر</p></a>
+                <i class="fa-solid fa-search text-green search-icon" onclick="showSearchInput()" style="font-size: 25px;cursor: pointer;"></i>
+                <input type="text" class="form-control search-input d-none" style="width: 75px;" placeholder="search">
+                <a href="notification.html"><i class="fa-solid fa-bell text-green me-1" style="font-size: 25px;cursor: pointer;"></i></a>
+                <div class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-dark" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img id="selectedFlag" src="img/egypt.png" alt="Selected Language"> <span id="selectedLanguage" >اللغة العربية</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="background-color: white;">
+                      <a class="dropdown-item" href="#" onclick="setLanguage('اللغة العربية', 'img/egypt.png')">
+                          <img src="img/egypt.png" style="width: 30px;" alt="اللغة العربية"> اللغة العربية
+                      </a>
+                      <div class="dropdown-divider"></div>
+                
+                      <a class="dropdown-item" href="#" onclick="setLanguage('English', 'img/amirca.png')">
+                          <img src="img/amirca.png" alt="English"> English
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+    <div class="bg-home-page">
+        <div class="container">
+            <h5 class="text-white contact-div"> Contact Us <i class="fa-solid fa-phone text-danger"></i> 166645</h5>
+            <div class="row">
+                <div class="col-12">
+                   <div class="title-content text-light">
+                    <h1 class="mt-3 mb-3 text-center text-capitalize">We are here when we need to take</h1>
+                    <h1 class="mt-3 mb-3 text-center text-capitalize">care of everything in the world</h1>
+                </div>
+                <div class="home-content text-light">
+                <p class="mt-3 mb-3 text-white-50">here are many variations of passages of Lorem Ipsum presented, but they have often suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you want to use a passage of Lorem Ipsum then you need to use this text
+                </p>
+                </div>
+                <div class="join-button text-center">
+                    <button class="mt-3 mb-3 text-capitalize button-hover">join now</button>   
+                </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--box home Page-->
+    <div class="box-home-page py-5 container bg-white">
+        <div class="d-flex justify-content-around align-items-center contact-reservation">
+            <div class="contact-with-doctor d-flex">
+            <h4 class="mt-3 mb-3 contact-doctor-btn text-black-50" style="cursor: pointer;" onclick="showContactDiv()">التواصل مع الدكتور<span class="mx-3"><i class="fa-solid fa-phone"></i></span></h4>   
+            </div>
+            <div class="bag-icon d-flex">
+                <h4 class="mt-3 mb-3 reservation-doctor-btn green-color" style="cursor: pointer;" onclick="showReservationDiv()">الحجز مع دكتور <span class="mx-3"><i class="fa-solid fa-briefcase"></i></span></h4>   
+            </div>
+        </div>      
+        <div dir="rtl" class="d-flex flex-wrap justify-content-center reservation-div" >
+            <div class="dropdown">
+              <button class="dropdown-button" style="border-radius: 0 10px 10px 0;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-stethoscope"></i>
+                  <span class="title">اختر التخصص</span>
+                  <i class="fas fa-caret-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">تخصص 1</a>
+                  <a class="dropdown-item" href="#">تخصص 2</a>
+                  <a class="dropdown-item" href="#">تخصص 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown-button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-location-dot"></i>
+                  <span class="title">اختر المحافظة</span>
+                  <i class="fas fa-caret-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">تخصص 1</a>
+                  <a class="dropdown-item" href="#">تخصص 2</a>
+                  <a class="dropdown-item" href="#">تخصص 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown-button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-location-dot"></i>
+                  <span class="title">اختر المنطقة</span>
+                  <i class="fas fa-caret-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">تخصص 1</a>
+                  <a class="dropdown-item" href="#">تخصص 2</a>
+                  <a class="dropdown-item" href="#">تخصص 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown-button px-1" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-user-doctor"></i>
+                  <span class="title"> الدكتور أو المستشفى</span>
+                  <i class="fas fa-caret-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">تخصص 1</a>
+                  <a class="dropdown-item" href="#">تخصص 2</a>
+                  <a class="dropdown-item" href="#">تخصص 3</a>
+              </div>
+            </div>
+            <a href="search.html" class=" btn btn-danger pt-3 button-hover" style="border-radius:10px 0 0 10px;width: 185px;">
+                <i class="fa-solid fa-search ms-2"></i>
+                البحث
+            </a>
+          </div>
+        <div dir="rtl" class="d-flex justify-content-center contact-doctor-div d-none" >
+            <div class="dropdown">
+              <button class="dropdown-button contact-doctor-dropdown" style="border-radius: 0 10px 10px 0;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-stethoscope"></i>
+                  <span class="title">اختر التخصص</span>
+                  <i class="fas fa-caret-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">تخصص 1</a>
+                  <a class="dropdown-item" href="#">تخصص 2</a>
+                  <a class="dropdown-item" href="#">تخصص 3</a>
+              </div>
+            </div>
+            <div class=" btn btn-danger pt-3" style="border-radius:10px 0 0 10px;width: 185px;">
+                <i class="fa-solid fa-search ms-2"></i>
+                البحث
+            </div>
+          </div>
+    </div>
+    <!--box home Page-->
+    <!--photo-with img-->
+    <div class="photo-with-img mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                 <div class="title-after-photo mb-4">
+                  <h2 class="mt-2 mb-2 text-capitalize fw-bold">Consultation <br>
+                    With our Professional doctors:</h2>
+                    <p class="mt-2 mb-2 text-capitalize text-black-50">Now we can make an appointment for consultation with <br> your doctor any where and any time  via online </p>  
+                 </div>
+                 <div class="icon-with-titles">
+                 <p class="mt-2 mb-2 text-capitalize text-black-50"><span class="me-2 green-color"><i class="fa-solid fa-briefcase"></i></span>Easy online schedule here</p>  
+                 <p class="mt-2 mb-2 text-capitalize text-black-50"><span class="me-2 green-color"><i class="fa-solid fa-users"></i></span>Served directly by experts</p> 
+                 </div>   
+                 <div class="button-cong mt-4  mb-4">
+                    <button class="text-capitalize button-hover">Start Consultation</button>
+                 </div>
+                </div>
+                <div class="col-md-6 text-lg-end">
+                 <div class="img-box">
+                    <img src="img/Rectangle 13.png" class="img-fluid" alt="">
+                    <div class="img-two">
+                        <img src="img/Rectangle 14.png" class="img-fluid" alt="">
+                    </div>
+                 </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contner-in-home-bottom mt-5 mb-5 text-center">
+        <div class="container">
+          <h2 class="mt-5 fw-bold mb-0 text-capitalize">What Our Patients Say about Us</h2>
+          <p class="mt-3 mb-3 text-black-50"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum  is simply dummy text of the printing and typesetting </p>
+        </div>
+    </div>
+    <!--photo-with img-->
+    <!--three-card-img-->
+    <div class="three-card-img text-center mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+            <div class="col-md-4">
+                <div class="start-card p-4 mt-3 mb-3">
+                <div class="card-head">
+                    <img src="img/person1.jpeg" class="img-fluid" alt="">
+                    <h4 class="fw-bold text-capitalize mb-0">mohamed adel</h4>
+                </div>
+                <div class="card-stat mb-3">
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                </div>
+                <div class="card-title">
+                   <p class="text-black-50"> is simply dummy text of the printing and typesetting <br>
+                     industry. Lorem Ipsum  is simply dummy text of <br> the printing and typesetting </p>     
+                </div>
+            </div>
+        </div>
+            <div class="col-md-4">
+                <div class="start-card p-4 mt-3 mb-3">
+                <div class="card-head mb-0 pb-0">
+                    <img src="img/person2.jpeg" class="img-fluid" alt="">
+                    <h4 class="fw-bold text-capitalize mb-0">mohamed adel</h4>
+                </div>
+                <div class="card-stat mb-3">
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                </div>
+                <div class="card-title">
+                   <p class="text-black-50"> is simply dummy text of the printing and typesetting <br>
+                     industry. Lorem Ipsum  is simply dummy text of <br> the printing and typesetting </p>     
+                </div>
+            </div>
+        </div>
+            <div class="col-md-4">
+                <div class="start-card p-4 mt-3 mb-3">
+                <div class="card-head">
+                    <img src="img/person3.jpeg" class="img-fluid" alt="">  
+                    <h4 class="fw-bold text-capitalize mb-0">mohamed adel</h4>
+                </div>
+                <div class="card-stat mb-3">
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                </div>
+                <div class="card-title">
+                   <p class="text-black-50"> is simply dummy text of the printing and typesetting <br>
+                     industry. Lorem Ipsum  is simply dummy text of <br> the printing and typesetting </p>     
+                </div>
+            </div>
+        </div>
+        <div class="two-arrow-button mt-3 mb-3 d-flex justify-content-center align-items-center">
+            <div class="arrow-not-acitve">
+                <button class="mx-3 button-hover "><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+            <div class="arrow-acive">
+                <button class="mx-3 button-hover"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+    <!--three-card-img-->
+    <!-- footer -->
+    <footer class="mt-4" style="background-color: #C4E6D9;">
+      <div class="container">
+          <div class="row p-4">
+              <div class="col-md-4">
+                  <div class="d-flex justify-content-center align-items-center">
+                      <img src="./img/logo.png" style="width:120px ;" alt="">
+                  </div>
+                  <div class="icons d-flex flex-wrap justify-content-center align-items-center gap-3">
+                      <a href="#"><i class="fa-brands fa-facebook text-green"></i></a>
+                      <a href="#"><i class="fa-brands fa-instagram text-green"></i></a>
+                      <a href="#"><i class="fa-brands fa-whatsapp text-green"></i></a>
+                      <a href="#"><i class="fa-brands fa-twitter text-green"></i></a>
+                  </div>
+              </div>
+              <div class="col-md-2 text-center">
+                  <h4 class="fw-bold mb-3">Important </h4>
+                  <p><a href="find-doctor.html" target="_blank" class="text-black text-decoration-none">Find Doctors</a></p>
+                  <p><a href="ourServices.html" target="_blank" class="text-black text-decoration-none">Our Services</a></p>
+                  <p><a href="reviews.html" target="_blank" class="text-black text-decoration-none">Reviews</a></p>
+              </div>
+              <div class="col-md-3 text-center">
+                  <h4 class="fw-bold mb-3">Help</h4>
+                  <p><a href="doctors.html" target="_blank" class="text-black text-decoration-none">Consultaion Call</a></p>
+                  <p><a href="privacy.html" target="_blank" class="text-black text-decoration-none">Privacy Policy</a></p>
+                  <p><a href="terms.html" target="_blank" class="text-black text-decoration-none">Terms & Conditions</a></p>
+              </div>
+              <div class="col-md-3 text-center text-md-start">
+                  <h4 class="fw-bold mb-3">Contact us </h4>
+                  <div class="d-flex justify-content-md-start justify-content-center gap-2 text-green">
+                    <i class="fa-solid fa-envelope mt-1"></i>
+                    <p>User32@gmail.com</p>
+                  </div>
+                  <div class="d-flex justify-content-md-start justify-content-center gap-2 text-green">
+                    <i class="fa-solid fa-phone mt-1"></i>
+                    <p>0127 502 4454</p>
+                  </div>
+                  <div class="d-flex justify-content-md-start justify-content-center gap-2 text-green">
+                    <i class="fa-solid fa-location-dot mt-1"></i>
+                    <p>Aga - Mansoura - Egypt</p>
+                  </div>
+              </div>
+              <p class="text-center text-green mt-2">@2023 medical .All rights reserved</p>
+          </div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+
+ <!--script Bootstrap-->
+ <script src="js/bootstrap.bundle.min.js"></script>
+ <!--script Bootstrap-->
+ <!--font awesome scrript-->
+ <script src="js/all.min.js"></script>
+ <script src="js/index.js"></script>
+ <!--font awesome scrript-->
+</body>
+</html>

@@ -1,0 +1,64 @@
+.button-hover {
+  opacity: 1;
+	transition: 0.2s;
+}
+.button-hover:hover {
+	opacity: 0.7;
+	transition: 0.2s;
+}
+body{
+    background-color: #f8f8f8 !important;
+  }
+  .text-green{
+    color: rgba(61, 181, 136, 1);
+  }
+  .bg-green{
+    background-color: rgba(61, 181, 136, 1);
+  }
+  .text-black{
+    color: #000 !important;
+  }
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(61, 181, 136, 1) ;
+    border: 1px solid #ced4da;
+    padding: 20px;
+    width:180px ;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.dropdown-button .title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.input-with-icon {
+  position: relative;
+}
+.input-with-icon input {
+  background-color: #FAFAFA ;
+  border: 1px solid #3DB588;
+  padding: 10px;
+  padding-right: 40px; /* Adjust padding to make space for the icon */
+  outline: none;
+  color: #000;
+  border-radius: 10px;
+  width: 100%;
+}
+.input-with-icon input::placeholder {
+  color: #000; /* Change this color to your desired placeholder color */
+}
+.input-with-icon .icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #000; /* Adjust icon color as needed */
+}

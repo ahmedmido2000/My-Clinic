@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Clinic</title>
+    <!--bootstrap-file-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--bootstrap-file-->
+    <!--fontawesome-file-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--icons-site-->
+    <link rel="icon" type="png" href="img/logo.png" />
+    <!--icons-site-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!--google-font-->
+    <!--woow AnimateFiles Css-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--woow AnimateFiles Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+    <!--google-font-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet" />
+      
+  </head>
+  <body class="text-black">
+        <!-- header -->
+        <header class="bg-white">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg  px-3">
+              <div class="d-flex align-items-center">
+                  <a href="index.html"><img src="./img/logo.png" class="img-fluid logoImg" alt=""></a>
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <span style="color: #3b3a5e"
+                    ><i class="fa-solid fa-bars p-1"></i
+                  ></span>
+                </span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                  <li class="nav-item active fw-bold">
+                    <a class="nav-link text-black" href="index.html"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black " href="contactUs.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black " href="terms.html">Terms & Conditions</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link green-color button-hover" href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+                  </li>
+                </ul>
+                <div class="d-flex flex-wrap gap-2 align-items-center" dir="rtl">
+                  <a href="profile.html"><img src="img/person1.jpeg" class="img-fluid userImg" alt=""></a>
+                  <a href="profile.html" class="text-black text-decoration-none"><p class="m-0 fw-bold">احمد على صابر</p></a>
+                  <i class="fa-solid fa-search text-green search-icon" onclick="showSearchInput()" style="font-size: 25px;cursor: pointer;"></i>
+                  <input type="text" class="form-control search-input d-none" style="width: 75px;" placeholder="search">
+                  <a href="notification.html"><i class="fa-solid fa-bell text-green me-1" style="font-size: 25px;cursor: pointer;"></i></a>
+                  <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img id="selectedFlag" src="img/egypt.png" alt="Selected Language"> <span id="selectedLanguage" >اللغة العربية</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="background-color: white;">
+                        <a class="dropdown-item" href="#" onclick="setLanguage('اللغة العربية', 'img/egypt.png')">
+                            <img src="img/egypt.png" style="width: 30px;" alt="اللغة العربية"> اللغة العربية
+                        </a>
+                        <div class="dropdown-divider"></div>
+                  
+                        <a class="dropdown-item" href="#" onclick="setLanguage('English', 'img/amirca.png')">
+                            <img src="img/amirca.png" alt="English"> English
+                        </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <!-- header -->
+    <section class="pt-5">
+      <div class="container text-center">
+            <h2>Test Result</h2>
+            <p>Dr- Mohamed (جراحه الاسنان)</p>
+            <div dir="rtl" class="d-flex justify-content-between align-items-center w-100 p-4 text-decoration-none text-black bg-white mt-4" style="border-radius: 20px;">
+                <div class="d-flex gap-2 align-items-center">
+                    <img src="img/pdficons.gif" style="width:30px ;" alt="">
+                  <h6>(جراحه الاسنان)</h6>
+                </div>
+                <a href="ahmed.pdf" class="text-black" download>          
+                  <i class="fa-solid fa-download mb-1"></i>
+                </a>
+            </div>
+      </div>
+    </section>
+
+    <!--scirpt Files-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <!--scirpt Files-->
+  </body>
+</html>

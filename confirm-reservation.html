@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <!--style file-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="png" href="img/logo.png" />
+    <!--style file-->
+    <!--bootstrap file-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--bootstrap file-->
+    <!--fontawesome file-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--fontawesome file-->
+</head>
+<body>
+      <!-- header -->
+      <header class="bg-white" dir="ltr">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg  px-3">
+            <div class="d-flex align-items-center">
+                <a href="index.html"><img src="./img/logo.png" class="img-fluid logoImg" alt=""></a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">
+                <span style="color: #3b3a5e"
+                  ><i class="fa-solid fa-bars p-1"></i
+                ></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav m-auto">
+                <li class="nav-item active fw-bold">
+                  <a class="nav-link text-black" href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-black " href="contactUs.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-black " href="terms.html">Terms & Conditions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link green-color button-hover" href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+                </li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2 align-items-center" dir="rtl">
+                <a href="profile.html"><img src="img/person1.jpeg" class="img-fluid userImg" alt=""></a>
+                <a href="profile.html" class="text-black text-decoration-none"><p class="m-0 fw-bold">احمد على صابر</p></a>
+                <i class="fa-solid fa-search text-green search-icon" onclick="showSearchInput()" style="font-size: 25px;cursor: pointer;"></i>
+                <input type="text" class="form-control search-input d-none" style="width: 75px;" placeholder="search">
+                <a href="notification.html"><i class="fa-solid fa-bell text-green me-1" style="font-size: 25px;cursor: pointer;"></i></a>
+                <div class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-dark" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img id="selectedFlag" src="img/egypt.png" alt="Selected Language"> <span id="selectedLanguage" >اللغة العربية</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="background-color: white;">
+                      <a class="dropdown-item" href="#" onclick="setLanguage('اللغة العربية', 'img/egypt.png')">
+                          <img src="img/egypt.png" style="width: 30px;" alt="اللغة العربية"> اللغة العربية
+                      </a>
+                      <div class="dropdown-divider"></div>
+                
+                      <a class="dropdown-item" href="#" onclick="setLanguage('English', 'img/amirca.png')">
+                          <img src="img/amirca.png" alt="English"> English
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- header -->
+    <div class="bg mb-5">
+        <div class="container">
+            <div class="row">
+       <div class="col-12">
+        <div class="icon-booking">
+            <img src="img/Vector.png" class="img-fluid" alt="">
+            <div class="text-center"><i class="fa-solid fa-check-circle text-green" style="font-size: 50px;"></i></div>
+            <p class="mt-3 mb-3 text-light text-center">تم الحجز بنجاح</p>
+       </div>      
+    </div>   
+            </div>
+        </div>
+    </div>
+    <section>
+<div class="booking-history  mt-3 mb-3">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-lg-end">
+                <div class="conent-booking">
+                    <div class="title-booking">
+                      <p><span class="mx-3 green-color"><i class="fa-solid fa-money-bill"></i></span>سعر الكشف : 400 جنية</p>
+                    </div>
+                    <div class="title-booking">
+                        <p><span class="mx-3"><i class="fa-solid fa-phone green-color"></i></span>رقم تليفون العياده: 16675</p>
+                      </div>
+                  </div>  
+            </div>
+            <div class="col-md-6 text-lg-start ">
+          <div class="flex-four-cont">
+            <div class="button-ico-print mb-3">
+                <button class="mx-3"><img src="img/vscode-icons_file-type-pdf2.png" class="img-fluid" alt=""></button>
+                <button class="mx-3"><img src="img//material-symbols_print.png" class="img-fluid" alt=""></button>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="booking-details">
+          <h5><span class="mx-3 green-color"><i class="fa-solid fa-briefcase"></i></span>تفاصيل الحجز </h5>  
+        </div>
+        <hr>
+        <div class="coutm-name d-flex container">
+           <h5 class="mx-5">اسم المريض</h5> 
+           <p class="mx-5">Mohamed</p>
+        </div>
+        <hr>
+        <div class="booking-date d-flex container">
+            <h5 class="mx-5">تاريخ الحجز</h5> 
+            <p class="mx-5">اليوم ، ١١:٥٠ صباحا الدخول بميعاد محدد</p>
+         </div>
+         <hr>
+         <div class="doc-name d-flex container">
+            <h5 class="mx-5">اسم الدكتور</h5> 
+            <p class="mx-5">مركز عمرو منسي</p>
+         </div>
+         <hr>
+         <div class="waiting-date d-flex container">
+            <h5 class="mx-5">مدة الانتظار</h5> 
+            <p class="mx-5">11 دقيقة</p>
+         </div>
+         <hr>
+         <div class="location d-flex container">
+            <h5 class="mx-5">عنوان العيادة</h5> 
+            <p class="mx-5">٦ المرغني - الدور ٢ - عماره ساليه سوكريه بجوار كنتاكي و كوستا كافيه<button class="green-color" id="showHollabButton"><span class="mx-1"><i class="fa-solid fa-location-dot"></i></span></button></p>
+         </div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="overlay" id="overlay"></div>
+<div class="show-poup text-center" id="showHollab">
+  <div class="map-holab">
+    <iframe style="border-radius:20px ;width: 350px;height: 300px;" src="https://www.youtube.com/embed/DrTfw7jwmTc?si=WlcU2l1LgC_3ASWB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <div class="button-show">
+    <button class="mt-2 mb-2 text-capitalize">show in google map</button>
+  </div>
+</div>
+    <!-- footer -->
+    <footer class="mt-4" dir="ltr" style="background-color: #C4E6D9;">
+      <div class="container">
+          <div class="row p-4">
+              <div class="col-md-4">
+                  <div class="d-flex justify-content-center align-items-center">
+                      <a href="index.html"><img src="./img/logo.png" style="width:120px ;" alt=""></a>
+                  </div>
+                  <div class="icons d-flex flex-wrap justify-content-center align-items-center gap-3">
+                      <a href="#"><i class="fa-brands fa-facebook text-green"></i></a>
+                      <a href="#"><i class="fa-brands fa-instagram text-green"></i></a>
+                      <a href="#"><i class="fa-brands fa-whatsapp text-green"></i></a>
+                      <a href="#"><i class="fa-brands fa-twitter text-green"></i></a>
+                  </div>
+              </div>
+              <div class="col-md-2 text-center">
+                  <h4 class="fw-bold mb-3">Important </h4>
+                  <p><a href="find-doctor.html" target="_blank" class="text-black text-decoration-none">Find Doctors</a></p>
+                  <p><a href="ourServices.html" target="_blank" class="text-black text-decoration-none">Our Services</a></p>
+                  <p><a href="reviews.html" target="_blank" class="text-black text-decoration-none">Reviews</a></p>
+              </div>
+              <div class="col-md-3 text-center">
+                  <h4 class="fw-bold mb-3">Help</h4>
+                  <p><a href="doctors.html" target="_blank" class="text-black text-decoration-none">Consultaion Call</a></p>
+                  <p><a href="privacy.html" target="_blank" class="text-black text-decoration-none">Privacy Policy</a></p>
+                  <p><a href="terms.html" target="_blank" class="text-black text-decoration-none">Terms & Conditions</a></p>
+              </div>
+              <div class="col-md-3 text-center text-md-start">
+                  <h4 class="fw-bold mb-3">Contact us </h4>
+                  <div class="d-flex justify-content-md-start justify-content-center gap-2 text-green">
+                    <i class="fa-solid fa-envelope mt-1"></i>
+                    <p>User32@gmail.com</p>
+                  </div>
+                  <div class="d-flex justify-content-md-start justify-content-center gap-2 text-green">
+                    <i class="fa-solid fa-phone mt-1"></i>
+                    <p>0127 502 4454</p>
+                  </div>
+                  <div class="d-flex justify-content-md-start justify-content-center gap-2 text-green">
+                    <i class="fa-solid fa-location-dot mt-1"></i>
+                    <p>Aga - Mansoura - Egypt</p>
+                  </div>
+              </div>
+              <p class="text-center text-green mt-2">@2023 medical .All rights reserved</p>
+          </div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+<script src="js/location.js"></script>
+<!--script Bootstrap-->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/index.js"></script>
+<!--script Bootstrap-->
+<!--font awesome scrript-->
+<script src="js/all.min.js"></script>
+<!--font awesome scrript-->
+</body>
+
+</html>    

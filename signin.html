@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SignIn And Log In</title>
+  <!--style file-->
+  <link rel="stylesheet" href="css/style.css" />
+  <!--style file-->
+  <!--bootstrap file-->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="icon" type="png" href="img/logo.png" />
+  <!--bootstrap file-->
+  <!--fontawesome file-->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!--fontawesome file-->
+</head>
+
+<body>
+  <div class="start-signin-and-login  mt-3 mb-3">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mt-4 mb-5 ">
+          <div class="img-sign-and-log">
+            <img src="img/imglogtwo.jpeg" class="img-fluid" alt="" />
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mb-2 ">
+          <div class="input-forms " id="secone">
+            <div class="log-and-sign-button d-flex align-items-center justify-content-center gap-5 text-capitalize mt-2 mb-4">
+              <a href="signin.html" class="button-hover active px-5" id="activeBtn">sign in</a>
+              <a href="login.html" class="button-hover not-active px-5" id="notActiveBtn">log in</a>
+            </div>
+            <p class="text-capitalize text-center mt-5">
+              Welcome, please enter your email and password
+            </p>
+            <form action="">
+              <div class="inputs-logs text-center">
+                <div class="myname mt-3 mb-3 ">
+                  <span class="icons-hide"><i class="fa-solid fa-user"></i></span><input type="name"
+                    class="inputsHideIcons" placeholder="Myname" />
+                </div>
+                <div class="spec">
+                  <span class="icons-hide"><i class="fa-solid fa-star"></i></span><select name="" id=""
+                    class="inputsHideIcons">
+                    <option value="" selected>specialty</option>
+                    <option value="">specialty</option>
+                    <option value="">specialty</option>
+                  </select>
+                </div>
+                <div class="email mt-3 mb-3">
+                  <span class="icons-hide"><i class="fa-solid fa-envelope"></i></span>
+                  <input type="email" class=" inputsHideIcons" placeholder="E-mail" />
+                </div>
+                <div class="password mt-3 mb-3 ">
+                  <span class="icon-lock icons-hide"><i class="fa-solid fa-lock"></i></span>
+                  <input type="password" class="inputsHideIcons" placeholder="****" />
+                  <span class="icon-eye " onclick="(togglePassword(this))"><i class="fa-solid fa-eye"></i></span>
+                </div>
+                <div class="loginto mt-2 mb-2">
+                  <a href="login.html" class="black-color">Log in to your account</a>
+                </div>
+                <div class="signin-button mt-3 mb-3">
+                  <button class=" button-hover w-100 text-capitalize">sign up</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="frame-bttom-signin text-end">
+    <img src="img/framebottom.png" class="img-fluid" alt="">
+  </div>
+  <script src="js/script.js"></script>
+  <!--script Bootstrap-->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!--script Bootstrap-->
+  <!--font awesome scrript-->
+  <script src="js/all.min.js"></script>
+  <!--font awesome scrript-->
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Send Code</title>
+    <!--style file-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--style file-->
+    <!--bootstrap file-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="icon" type="png" href="img/logo.png" />
+    <!--bootstrap file-->
+    <!--fontawesome file-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--fontawesome file-->
+</head>
+<body>
+    
+<div class="section-one mt-3 mb-3 text-center">
+    <div class="container">
+        <div class="flex-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-content mt-3 mb-5">
+                        <h5 class="text-capitalize">Enter the 4-digital code sent to you at <br> 0813-3754-6113</h5>
+                    </div>
+                    <div class="four-inputs-code d-flex justify-content-center align-items-center mt-3 mb-3">
+                        <input class="mx-3" required type="text" maxlength="1" pattern="\d*">
+                        <input class="mx-3" required type="text" maxlength="1" pattern="\d*">
+                        <input class="mx-3" required type="text" maxlength="1" pattern="\d*">
+                        <input class="mx-3" required type="text" maxlength="1" pattern="\d*">
+                    </div>
+                    <div class="dont-save">
+                        <a href="#" id="send-Code" class="button-hover text-capitalize mt-4">I didn't receive a code <span id="timer">(0.0)</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="arrow-and-next-button justify-content-between d-flex align-items-center">
+            <div class="arrow-button">
+                <a href="forgetpassword.html" class="button-hover"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <div class="next-buttons">
+                <a href="newPassword.html " class=" button-hover text-capitalize">next <span class=""><i class="fa-solid fa-arrow-right"></i></span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/sendCode.js"></script>
+<!--script Bootstrap-->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--script Bootstrap-->
+<!--font awesome scrript-->
+<script src="js/all.min.js"></script>
+<!--font awesome scrript-->
+</body>
+
+</html>
